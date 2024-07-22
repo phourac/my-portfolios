@@ -1,5 +1,22 @@
 import type { Config } from "tailwindcss";
 
+const colors = {
+  primary: {
+    main: "#BF40BF",
+    light: "#afaaec",
+    lighter: "#F7F9FA",
+    content: "#FFFFFF",
+    typography: "#090A0A",
+    dark: "#12071f",
+  },
+  secondary: {
+    main: "#4a3dd0",
+    grey: "#72777A",
+    dark: "#303437",
+  },
+  paper: "#f8f8fb",
+};
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,10 +25,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: colors.primary.main,
+        "primary-content": colors.primary.content,
+        "primary-light": colors.primary.light,
+        "primary-lighter": colors.primary.lighter,
+        "primary-typography": colors.primary.typography,
+        "primary-dark": colors.primary.dark,
+        secondary: colors.secondary.main,
+        "secondary-grey": colors.secondary.grey,
+        "secondary-dark": colors.secondary.dark,
+        paper: colors.paper,
       },
     },
   },
