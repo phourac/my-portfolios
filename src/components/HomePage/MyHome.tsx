@@ -1,7 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ThreeJs from "../ThreeJs";
 import Content from "./Content";
+import { Canvas } from "@react-three/fiber";
+import Stars from "./Stars";
+
+const ThreeJs = () => {
+  return (
+    <Canvas camera={{ position: [0, 0, 1] }}>
+      <Stars />
+    </Canvas>
+  );
+};
 
 function MyHome() {
   return (

@@ -21,12 +21,12 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body {
   overscroll-behavior-y: none;
-  font-family: "Inter var", sans-serif;
+  /* font-family: "Inter var", sans-serif; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #ddd;
@@ -67,3 +67,37 @@ h1 {
   mask-image: none;
   -webkit-mask-image: none;
 }
+
+.screen {
+  position: relative;
+  /* display: grid; */
+  color: #fff;
+  height: 100vh;
+  /* place-content: center; */
+  place-items: center;
+}
+
+.App {
+  min-height: 100vh; /* Ensure the container is tall enough for scrolling */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+}
+.Tooltip {
+  background: #282928;
+  color: white;
+  pointer-events: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  max-width: 400px;
+}
+
+/* .row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.bottom-row {
+  margin-top: 100px;
+} */

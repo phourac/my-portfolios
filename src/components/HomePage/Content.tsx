@@ -5,6 +5,7 @@ import Developer from "../AnimationIcon/Developer";
 
 import { motion } from "framer-motion";
 import LearnMoreIcon from "../AnimationIcon/LearnMoreIcon";
+import Magnetic from "../common/Magnetic";
 
 function Content() {
   const [hover, setHover] = useState(false);
@@ -27,7 +28,7 @@ function Content() {
             className="flex flex-col items-start justify-start"
           >
             <h2 className="text-[32px] md:text-[58px] tracking-[2px] font-bold">
-              Hi, I'm
+              Hi, I&apos;m
               <motion.div
                 style={{
                   display: "inline-block",
@@ -64,22 +65,24 @@ function Content() {
                 specializing in interfaces and web applications.
               </p>
             </div>
-            <motion.div
-              onHoverStart={() => setHover(true)}
-              onHoverEnd={() => setHover(false)}
-              whileHover={{ scale: 1.1 }} // Add scaling effect on hover
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Link
-                href={"/about"}
-                className={`rounded-xl pl-8 ${
-                  hover ? "pr-0" : "pr-8"
-                }  py-2 mt-12 text-[18px] flex items-center justify-center bg-secondary text-white`}
+            <Magnetic>
+              <motion.div
+                onHoverStart={() => setHover(true)}
+                onHoverEnd={() => setHover(false)}
+                whileHover={{ scale: 1.1 }} // Add scaling effect on hover
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                Learn more
-                {hover && <LearnMoreIcon />}
-              </Link>
-            </motion.div>
+                <Link
+                  href={"/about"}
+                  className={`rounded-xl pl-8 ${
+                    hover ? "pr-0" : "pr-8"
+                  }  py-2 mt-12 text-[18px] flex items-center justify-center bg-secondary text-white`}
+                >
+                  Learn more
+                  {hover && <LearnMoreIcon />}
+                </Link>
+              </motion.div>
+            </Magnetic>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 100 }}

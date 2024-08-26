@@ -7,7 +7,7 @@ const colors = {
     lighter: "#F7F9FA",
     content: "#FFFFFF",
     typography: "#090A0A",
-    dark: "#12071f",
+    dark: "#121212",
   },
   secondary: {
     main: "#4a3dd0",

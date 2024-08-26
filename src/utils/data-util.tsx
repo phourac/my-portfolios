@@ -1,17 +1,264 @@
-export const navbar = [
+import { title } from "process";
+import {
+  FaBootstrap,
+  FaCss3,
+  FaFigma,
+  FaFileWord,
+  FaGitAlt,
+  FaGithub,
+  FaGitlab,
+  FaHtml5,
+  FaNode,
+  FaPython,
+  FaReact,
+  FaVuejs,
+  FaWordpress,
+} from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import {
+  PiMicrosoftExcelLogoFill,
+  PiMicrosoftPowerpointLogoFill,
+} from "react-icons/pi";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import {
+  SiCanva,
+  SiCodemirror,
+  SiDaisyui,
+  SiJira,
+  SiMicrosoftword,
+  SiMui,
+  SiNuxtdotjs,
+  SiStrapi,
+  SiTypescript,
+} from "react-icons/si";
+import { TbBrandFramerMotion, TbBrandThreejs } from "react-icons/tb";
+
+export const navItems = [
   {
-    name: "Home",
-    route: "/",
-    value: "",
+    title: "Home",
+    href: "/",
   },
   {
-    name: "About",
-    route: "/about",
-    value: "about",
+    title: "About",
+    href: "/about",
   },
   {
-    name: "Contact",
-    route: "/contact",
-    value: "contact",
+    title: "Work",
+    href: "/work",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
   },
 ];
+
+export const SkillsData = [
+  {
+    title: "Promgraming Languages",
+    skill: [
+      {
+        icon: FaHtml5,
+        value: "Html",
+        lang: "",
+      },
+      {
+        icon: FaCss3,
+        value: "CSS",
+        lang: "",
+      },
+      {
+        icon: IoLogoJavascript,
+        value: "Javascript",
+        lang: "",
+      },
+      {
+        icon: "",
+        value: "ECMAScript",
+        lang: "ES",
+      },
+      {
+        icon: SiTypescript,
+        value: "Typescript",
+        lang: "",
+      },
+      {
+        icon: FaPython,
+        value: "Python",
+        lang: "",
+      },
+    ],
+  },
+  {
+    title: "Frameworks, Libraries & mores",
+    skill: [
+      {
+        icon: FaReact,
+        value: "React.js",
+        lang: "",
+      },
+      {
+        icon: FaVuejs,
+        value: "Vue.js",
+        lang: "",
+      },
+      {
+        icon: RiNextjsFill,
+        value: "Next.js",
+        lang: "",
+      },
+      {
+        icon: SiNuxtdotjs,
+        value: "Nuxt.js",
+        lang: "",
+      },
+      {
+        icon: RiTailwindCssFill,
+        value: "TailwindCSS",
+        lang: "",
+      },
+      {
+        icon: FaBootstrap,
+        value: "Bootstrap",
+        lang: "",
+      },
+
+      {
+        icon: SiMui,
+        value: "MUI",
+        lang: "",
+      },
+      {
+        icon: SiDaisyui,
+        value: "DaisyUI",
+        lang: "",
+      },
+      {
+        icon: TbBrandFramerMotion,
+        value: "Framer Motion",
+        lang: "",
+      },
+      {
+        icon: TbBrandThreejs,
+        value: "React Three Fiber",
+        lang: "",
+      },
+      {
+        icon: "",
+        value: "Chart.js",
+        lang: "Chart",
+      },
+      {
+        icon: SiCodemirror,
+        value: "Codemirror",
+        lang: "",
+      },
+
+      {
+        icon: FaNode,
+        value: "Node.js",
+        lang: "",
+      },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    skill: [
+      {
+        icon: FaGitAlt,
+        value: "Git",
+        lang: "",
+      },
+      {
+        icon: FaGithub,
+        value: "GitHub",
+        lang: "",
+      },
+      {
+        icon: FaGitlab,
+        value: "GitLab",
+        lang: "",
+      },
+      {
+        icon: SiJira,
+        value: "Jira",
+        lang: "",
+      },
+    ],
+  },
+  {
+    title: "Languages",
+    skill: [
+      {
+        icon: "",
+        lang: "ខ្មែរ",
+        value: "100%",
+      },
+      {
+        icon: "",
+        lang: "English",
+        value: "70%",
+      },
+    ],
+  },
+  {
+    title: "Other Skills",
+    skill: [
+      {
+        icon: SiStrapi,
+        value: "Strapi",
+        lang: "",
+      },
+      {
+        icon: FaWordpress,
+        value: "Wordpress",
+        lang: "",
+      },
+      {
+        icon: FaFigma,
+        value: "Figma",
+        lang: "",
+      },
+      {
+        icon: SiMicrosoftword,
+        value: "MsWord",
+        lang: "",
+      },
+      {
+        icon: PiMicrosoftPowerpointLogoFill,
+        value: "MsPowerpoint",
+        lang: "",
+      },
+      {
+        icon: SiCanva,
+        value: "Canva",
+        lang: "",
+      },
+    ],
+  },
+];
+
+export const contact = {
+  phone: {
+    number: "+855 85704481",
+  },
+  email: {
+    e: "tphourac@gmail.com",
+  },
+};
+
+export const socials = [
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/profile.php?id=100028488592786",
+  },
+  {
+    name: "Telegram",
+    link: "https://t.me/phourac",
+  },
+  {
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/than-phourac-822370267/",
+  },
+];
+
+// export const

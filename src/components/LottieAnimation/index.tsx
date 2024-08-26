@@ -7,7 +7,7 @@ const LottieAnimation = ({
   scroll,
 }: {
   animationData: any;
-  scroll: boolean;
+  scroll: boolean | number;
 }) => {
   const anime = React.useRef<HTMLDivElement>(null);
   const anim = React.useRef<AnimationItem>();
@@ -18,7 +18,7 @@ const LottieAnimation = ({
         container: anime.current,
         renderer: "svg",
         loop: scroll,
-        autoplay: scroll,
+        autoplay: true,
         animationData,
       });
     }

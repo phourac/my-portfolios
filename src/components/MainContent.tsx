@@ -1,11 +1,15 @@
 "use client";
 import React, { ReactNode, useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
+import Header from "./Header/nav/Header";
+import MainHeader from "./Header";
+import { usePathname } from "next/navigation";
 
-function MainContent({ children }: { children: ReactNode }) {
+function ChildComponent({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,7 +27,7 @@ function MainContent({ children }: { children: ReactNode }) {
   return (
     <>
       <AnimatePresence>
-        {isLoading && (
+        {isLoading && pathname === "/" && (
           <motion.div
             className="flex justify-center items-center h-screen"
             initial={{ opacity: 1 }}
@@ -40,12 +44,12 @@ function MainContent({ children }: { children: ReactNode }) {
       </AnimatePresence>
       {!isLoading && (
         <>
-          <Navbar />
-          {children}
+          <MainHeader />
+          <div className="h-screen"> {children}</div>
         </>
       )}
     </>
   );
 }
 
-export default MainContent;
+export default ChildComponent;

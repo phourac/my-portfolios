@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
 import MainContent from "@/components/MainContent";
+import ChildComponent from "@/components/MainContent";
+import Footer from "@/components/Footer";
+import { ModalProvider } from "@/context/ModalContext";
 
 const font = localFont({
   src: [
@@ -34,7 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font.variable}`}>
-        <MainContent children={children} />
+        <ModalProvider>
+          <ChildComponent>{children}</ChildComponent>
+        </ModalProvider>
       </body>
     </html>
   );
