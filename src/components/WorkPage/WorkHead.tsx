@@ -136,10 +136,7 @@ function WorkHead() {
             <WorkResult />
           </div>
         </div>
-        <Rounded>
-          {" "}
-          <p className="text-white">All Work</p>
-        </Rounded>
+        <Rounded> {/* <p className="text-white">All Work</p> */}</Rounded>
         {/* <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title="Scroll based animations 🤯"

@@ -1,16 +1,21 @@
 import { title } from "process";
+import { CiFacebook } from "react-icons/ci";
 import {
   FaBootstrap,
   FaCss3,
+  FaFacebook,
   FaFigma,
   FaFileWord,
   FaGitAlt,
   FaGithub,
   FaGitlab,
   FaHtml5,
+  FaInstagram,
+  FaLinkedinIn,
   FaNode,
   FaPython,
   FaReact,
+  FaTelegram,
   FaVuejs,
   FaWordpress,
 } from "react-icons/fa";
@@ -250,14 +255,50 @@ export const socials = [
   {
     name: "Facebook",
     link: "https://www.facebook.com/profile.php?id=100028488592786",
+    icon: FaFacebook,
   },
   {
     name: "Telegram",
     link: "https://t.me/phourac",
+    icon: FaTelegram,
   },
   {
     name: "Linkedin",
     link: "https://www.linkedin.com/in/than-phourac-822370267/",
+    icon: FaLinkedinIn,
+  },
+];
+
+export const socialsMedia = [
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/profile.php?id=100028488592786",
+    icon: FaFacebook,
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/t.kyrc?igsh=OG84ampsaDFnYzJn&utm_source=qr",
+    icon: FaInstagram,
+  },
+  {
+    name: "Telegram",
+    link: "https://t.me/phourac",
+    icon: FaTelegram,
+  },
+  {
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/than-phourac-822370267/",
+    icon: FaLinkedinIn,
+  },
+  {
+    name: "Github",
+    link: "https://github.com/Phourac",
+    icon: FaGithub,
+  },
+  {
+    name: "Gitlab",
+    link: "https://gitlab.com/-/user_settings/profile",
+    icon: FaGitlab,
   },
 ];
 

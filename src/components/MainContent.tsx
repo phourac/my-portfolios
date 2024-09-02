@@ -18,7 +18,10 @@ function ChildComponent({ children }: { children: ReactNode }) {
         setIsLoading(false);
       }, 500); // Wait for the opacity transition to finish before removing the loading text
 
-      return () => clearTimeout(loaderTimeout);
+      return () => {
+        clearTimeout(loaderTimeout);
+        clearTimeout(timer);
+      };
     }, 1000); // 1 second delay
 
     return () => clearTimeout(timer); // Cleanup the timer
@@ -45,7 +48,7 @@ function ChildComponent({ children }: { children: ReactNode }) {
       {!isLoading && (
         <>
           <MainHeader />
-          <div className="h-screen"> {children}</div>
+          <div className="h-screen">{children}</div>
         </>
       )}
     </>

@@ -108,12 +108,15 @@ export default function Modal({ modal, projects }: IModal) {
                   height={0}
                   alt="image"
                 />
+                {/* <button className="px-4 py-2 bg-white text-black font-bold rounded mt-4 absolute z-50">
+                  Button
+                </button>{" "} */}
               </div>
             );
           })}
         </div>
       </motion.div>
-      {/* <motion.div
+      <motion.div
         ref={cursor}
         className={styles.cursor}
         variants={scaleAnimation}
@@ -129,7 +132,14 @@ export default function Modal({ modal, projects }: IModal) {
         onClick={() => router.push(`/work/${titleDetail}`)}
       >
         View
-      </motion.div> */}
+      </motion.div>
+      {/* <button
+        className={styles.cursorLabel}
+        ref={cursorLabel}
+        onClick={() => router.push(`/work/${titleDetail}`)}
+      >
+        Button
+      </button> */}
     </>
   );
 }
