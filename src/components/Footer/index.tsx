@@ -8,6 +8,7 @@ import { useRef } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 import { contact, socials } from "@/utils/data-util";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const container = useRef(null);
@@ -18,6 +19,8 @@ export default function Footer() {
   const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
+
+  const router = useRouter();
   return (
     <motion.div style={{ y }} ref={container} className={styles.contact}>
       <div className={styles.body}>
@@ -29,7 +32,11 @@ export default function Footer() {
           <h2>Let&apos;s work</h2>
           {/* </span> */}
           <h2>together</h2>
-          <motion.div style={{ x }} className={styles.buttonContainer}>
+          <motion.div
+            style={{ x }}
+            className={styles.buttonContainer}
+            onClick={() => router.push("/contact")}
+          >
             <Rounded backgroundColor={"#334BD3"} className={styles.button}>
               <p>Get in touch</p>
             </Rounded>
@@ -57,7 +64,7 @@ export default function Footer() {
           </Rounded>
         </div>
         <div className={styles.info}>
-          <div>
+          {/* <div>
             <span>
               <h3>Version</h3>
               <p>2024 © Edition</p>
@@ -66,7 +73,7 @@ export default function Footer() {
               <h3>Version</h3>
               <p>11:49 PM GMT+2</p>
             </span>
-          </div>
+          </div> */}
           <div className="flex flex-col justify-start items-start">
             <h3 className="text-start w-full">socials</h3>
             <div className="flex justify-start items-start">

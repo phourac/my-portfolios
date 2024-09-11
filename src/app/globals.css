@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  /* html {
     font-family: var(--font-portfolios), system-ui, sans-serif;
-  }
+  } */
 }
 
 :root {

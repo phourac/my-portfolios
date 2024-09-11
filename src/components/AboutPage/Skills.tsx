@@ -103,12 +103,12 @@ function Skills() {
         </button> */}
         </div>
       </div>
-      <div ref={container} className={styles.slidingImages}>
+      {/* <div ref={container} className={styles.slidingImages}>
         <div className="bg-primary-dark h-[400px] inline-block w-full"></div>
         <motion.div style={{ height }} className={styles.circleContainer}>
           <div className={styles.circle}></div>
         </motion.div>
-      </div>
+      </div> */}
     </>
   );
 }

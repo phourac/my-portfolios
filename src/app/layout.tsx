@@ -9,12 +9,12 @@ import { ModalProvider } from "@/context/ModalContext";
 const font = localFont({
   src: [
     {
-      path: "../../public/fonts/Montserrat-Regular.ttf",
+      path: "../../public/fonts/Roboto-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Montserrat-Bold.ttf",
+      path: "../../public/fonts/Roboto-Bold.ttf",
       weight: "700",
       style: "normal",
     },

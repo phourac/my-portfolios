@@ -8,6 +8,9 @@ import ScrollIcon from "../AnimationIcon/ScrollIcon";
 import LineAnimate from "../AnimationIcon/LineAnimate";
 import BubbleAnimate from "../AnimationIcon/BubbleAnimate";
 import Skills from "./Skills";
+import Project from "../WorkPage/project";
+import WorkResult from "../WorkPage/WorkResult";
+import SlidingImages from "../SlidingImages";
 
 function HeadContent() {
   const text = "About me";
@@ -143,7 +146,22 @@ function HeadContent() {
             showProgress
           />
         </ScrollTriggerProvider>
+        <ScrollTriggerProvider debug={SHOW_MARKERS} options={{ end: "+=300%" }}>
+          <Screen
+            title={
+              <div className=" h-screen mx-auto flex flex-row  justify-between items-center">
+                <div className="container mx-auto px-4 md:px-24">
+                  <WorkResult />
+                </div>
+              </div>
+            }
+            colorStart="#121212"
+            colorEnd="#121212"
+            showProgress
+          />
+        </ScrollTriggerProvider>
         <Skills />
+        <SlidingImages slide="about" />
         {/* <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title="Scroll based animations 🤯"

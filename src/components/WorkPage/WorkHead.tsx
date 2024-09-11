@@ -13,6 +13,9 @@ import RedoAnimText from "../AboutPage/RedoAnimText";
 import WorkDesrcipt from "./WorkDesrcipt";
 import Magnetic from "../common/Magnetic";
 import Rounded from "../common/RoundedButton";
+import WorkList from "./WorkList";
+import SlidingImages from "../SlidingImages";
+import { projects } from "@/utils/data-util";
 
 function WorkHead() {
   const text = "Experiences";
@@ -131,12 +134,10 @@ function WorkHead() {
             showProgress
           />
         </ScrollTriggerProvider>
-        <div className=" h-screen mx-auto flex flex-row  justify-between items-center">
-          <div className="container mx-auto px-4 md:px-24">
-            <WorkResult />
-          </div>
-        </div>
-        <Rounded> {/* <p className="text-white">All Work</p> */}</Rounded>
+        {/* <WorkResult /> */}
+        <WorkList />
+        <SlidingImages slide="work" />
+        {/* <Rounded> <p className="text-white">All Work</p></Rounded> */}
         {/* <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title="Scroll based animations 🤯"
