@@ -39,7 +39,7 @@
   color: white;
   position: absolute;
   z-index: 2;
-  /* pointer-events: none; */
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;

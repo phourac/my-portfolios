@@ -40,16 +40,19 @@ export default function Modal({ modal, projects }: IModal) {
   const cursor = useRef(null);
   const cursorLabel = useRef(null);
 
+  console.log("modalContainer", modalContainer.current);
   useEffect(() => {
     //Move Container
     let xMoveContainer = gsap.quickTo(modalContainer.current, "left", {
       duration: 0.8,
       ease: "power3",
     });
+
     let yMoveContainer = gsap.quickTo(modalContainer.current, "top", {
       duration: 0.8,
       ease: "power3",
     });
+
     //Move cursor
     let xMoveCursor = gsap.quickTo(cursor.current, "left", {
       duration: 0.5,

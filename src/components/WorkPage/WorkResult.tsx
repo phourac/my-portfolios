@@ -5,6 +5,7 @@ import Modal from "./modal";
 import Project from "./project";
 import styles from "./styles.module.css";
 import { useState } from "react";
+import { experiences } from "@/utils/data-util";
 
 const projects = [
   {
@@ -34,23 +35,26 @@ const projects = [
 ];
 
 export default function WorkResult() {
-  const [modal, setModal] = useState({ active: false, index: 0 });
+  // const [modal, setModal] = useState({ active: false, index: 0 });
   // const { setModal, modal } = useModal();
 
   // console.log("modal", modal);
 
   return (
     <>
+      <p className="flex justify-start pb-8 text-5xl text-purple-400">
+        Education and Job
+      </p>
       <main className={styles.main}>
         <div className={styles.body}>
-          {projects.map((project, index) => {
+          {experiences.map((item, index) => {
             return (
               <Project
-                index={index}
-                title={project.title}
-                setModal={setModal}
-                img={project.img}
                 key={index}
+                index={index}
+                job={item.job}
+                year={item.year}
+                place={item.place}
               />
             );
           })}

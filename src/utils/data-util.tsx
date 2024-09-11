@@ -302,4 +302,227 @@ export const socialsMedia = [
   },
 ];
 
+export const projects = [
+  {
+    id: 1,
+    title: "Dogenote Seller",
+    type: "Admin Portal",
+    src: "c2montreal.png",
+    color: "#e3e5e7",
+    img: "/img/Screenshot 2024-09-06 at 2.58.52 in the afternoon.png",
+    credit: "Digital one",
+    tech: "React js",
+    detatil: {
+      img: "/img/dogenote-seller1.png",
+      vdo: "/img/dogenote-seller-mp4.mp4",
+      color: "#5c8ddf",
+      pc: [
+        {
+          img: "/img/dogenote-seller3.png",
+        },
+        {
+          img: "/img/dogenote-seller2.png",
+        },
+      ],
+    },
+  },
+  {
+    id: 2,
+    title: "Dogenote Admin",
+    type: "Admin Portal",
+    src: "c2montreal.png",
+    color: "#d6d7dc",
+    img: "/img/Screenshot 2024-09-06 at 2.59.58 in the afternoon.png",
+    credit: "Digital one",
+    tech: "React js",
+    detatil: {
+      img: "/img/dogenote_admin1.png",
+      vdo: "/img/dogenote-admin-video.mp4",
+      color: "#5c8ddf",
+      pc: [
+        {
+          img: "/img/dogenote-admin3.png",
+        },
+        {
+          img: "/img/dogenote_admin2.png",
+        },
+      ],
+    },
+  },
+  {
+    id: 3,
+    title: "Mulberry Preschool",
+    type: "Landing Page",
+    src: "c2montreal.png",
+    color: "#e3e3e3",
+    img: "/img/Screenshot 2024-09-06 at 2.35.09 in the afternoon.png",
+    credit: "Digital one",
+    tech: "Next js",
+    detatil: {
+      img: "/img/muberry1.png",
+      vdo: "/img/mulbery-mp4.mp4",
+      color: "#cd3887",
+      mobile: [
+        {
+          img: "/img/mulberry-m1.png",
+        },
+        {
+          img: "/img/mulberry-m2.png",
+        },
+        {
+          img: "/img/mulberry-m3.png",
+        },
+      ],
+    },
+  },
+  {
+    id: 4,
+    title: "TK Express",
+    type: "Landing Page",
+    src: "c2montreal.png",
+    color: "#21242b",
+    img: "/img/Screenshot 2024-09-06 at 2.55.16 in the afternoon.png",
+    credit: "Digital one",
+    tech: "Next js",
+    detatil: {
+      img: "/img/tkexpresspc.png",
+      vdo: "/img/tkexpress-home.mp4",
+      color: "#205068",
+      mobile: [
+        {
+          img: "/img/tk3.png",
+        },
+        {
+          img: "/img/tk2.png",
+        },
+        {
+          img: "/img/tk1.png",
+        },
+      ],
+    },
+  },
+  {
+    id: 5,
+    title: "AMK",
+    type: "Admin Portal",
+    src: "c2montreal.png",
+    color: "#d4e3ec",
+    img: "/img/AMK_TemplateList.png",
+    credit: "Digital one",
+    tech: "Next js",
+    detatil: {
+      img: "/img/amk1.png",
+
+      color: "#95456d",
+      pc: [
+        {
+          img: "/img/amk2.png",
+        },
+        {
+          img: "/img/amk3.png",
+        },
+      ],
+    },
+  },
+  {
+    id: 6,
+    title: "KH-POS",
+    type: "POS System",
+    src: "c2montreal.png",
+    color: "#e5e0e1",
+    img: "/img/kh-pos_productList.png",
+    credit: "Digital one",
+    tech: "React js",
+    detatil: {
+      img: "/img/kh-pos1.png",
+      color: "#3274f0",
+      pc: [
+        {
+          img: "/img/kh-pos2.png",
+        },
+        {
+          img: "/img/kh-pos3.png",
+        },
+      ],
+    },
+  },
+  {
+    id: 7,
+    title: "More Plus",
+    type: "Admin Dashboard",
+    src: "c2montreal.png",
+    color: "#d7d4cf",
+    img: "/img/moreplus-dashboard.png",
+    credit: "Digital one",
+    tech: "React js",
+    detatil: {
+      img: "/img/more-plus1.png",
+      vdo: "/img/more-plus-mp4.mp4",
+      color: "#FD6254",
+      pc: [
+        {
+          img: "/img/more-plus2.png",
+        },
+        {
+          img: "/img/more-plus3.png",
+        },
+      ],
+    },
+  },
+];
+
+export const experiences = [
+  {
+    year: "2019 - 2023",
+    job: "Computer Science - Bachelor Degree",
+    place: "RUPP",
+  },
+  {
+    year: "2019 - 2023",
+    job: "General English",
+    place: "CAM-ASEAN",
+  },
+  {
+    year: "2022 - 2023",
+    job: "Web Apprentice",
+    place: "Koompi",
+  },
+  {
+    year: "2023 - Present",
+    job: "Web Developer",
+    place: "BLOC-Delivery",
+  },
+];
+
+export const picAbout = [
+  {
+    color: "#21242b",
+    img: "/img/2024-09-10 17.14.50.jpg",
+  },
+  {
+    color: "#21242b",
+    img: "/img/2024-09-10 17.15.12.jpg",
+  },
+  {
+    color: "#21242b",
+    img: "/img/2024-09-10 17.26.35.jpg",
+  },
+  {
+    color: "#21242b",
+    img: "/img/2024-09-10 17.17.57.jpg",
+  },
+  {
+    color: "#21242b",
+    img: "/img/IMG_2101.jpg",
+  },
+  {
+    color: "#21242b",
+    img: "/img/IMG_2204.jpg",
+  },
+  {
+    color: "#21242b",
+    img: "/img/2024-09-10 17.14.50.jpg",
+  },
+];
+
 // export const
