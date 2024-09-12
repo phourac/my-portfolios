@@ -13,6 +13,9 @@ import RedoAnimText from "../AboutPage/RedoAnimText";
 import WorkDesrcipt from "./WorkDesrcipt";
 import Magnetic from "../common/Magnetic";
 import Rounded from "../common/RoundedButton";
+import WorkList from "./WorkList";
+import SlidingImages from "../SlidingImages";
+import { projects } from "@/utils/data-util";
 
 function WorkHead() {
   const text = "Experiences";
@@ -60,13 +63,13 @@ function WorkHead() {
 
   return (
     <>
-      <div>
+      <div className="overflow-x-hidden">
         {" "}
         {/* Ensure the content overflows the viewport */}
         <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title={
-              <div className=" h-screen mx-auto flex flex-col justify-center items-center">
+              <div className="h-screen mx-auto flex flex-col justify-center items-center">
                 <motion.div
                   className="font-bold text-[calc(15vw)] md:text-[calc(13vw)] lg:text-[calc(11vw)] text-white flex overflow-visible"
                   variants={container}
@@ -131,12 +134,12 @@ function WorkHead() {
             showProgress
           />
         </ScrollTriggerProvider>
-        <div className=" h-screen mx-auto flex flex-row  justify-between items-center">
-          <div className="container mx-auto px-4 md:px-24">
-            <WorkResult />
-          </div>
-        </div>
-        <Rounded> {/* <p className="text-white">All Work</p> */}</Rounded>
+        {/* <WorkResult /> */}
+        <WorkList />
+        <div className="sm:flex hidden">
+          <SlidingImages slide="work" />
+        </div>{" "}
+        {/* <Rounded> <p className="text-white">All Work</p></Rounded> */}
         {/* <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title="Scroll based animations 🤯"

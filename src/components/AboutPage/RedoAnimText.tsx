@@ -46,7 +46,7 @@ export default function RedoAnimText({ delay, texts }: IRedoAnimTextProps) {
 
   return (
     <motion.span
-      className="inline text-[32px]"
+      className="inline md:text-[32px] text-[24px]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.1 }}

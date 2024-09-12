@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <>
       <WorkHead />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

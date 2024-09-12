@@ -8,7 +8,7 @@ import React from "react";
 function page() {
   return (
     <>
-      <div className="pt-20">
+      <div className="pt-20 overflow-x-hidden">
         <FormHeader />
         <FormContact />
         {/* <Skills /> */}

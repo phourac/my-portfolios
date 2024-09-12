@@ -28,8 +28,10 @@ function Skills() {
       <div className="h-full container mx-auto px-4 md:px-24 flex flex-col items-start gap-10 pt-32">
         <div className="flex flex-col">
           <motion.div className="relative z-10 ">
-            <h2 className="text-[58px] font-bold relative z-20">Skills</h2>
-            <motion.div className="bg-primary h-20 w-20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1 -translate-y-1/2 z-0"></motion.div>
+            <h2 className="md:text-[58px] text-[32px] font-bold relative z-20">
+              Skills
+            </h2>
+            <motion.div className="bg-primary md:h-20 md:w-20 w-16 h-16 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1 -translate-y-1/2 z-0"></motion.div>
           </motion.div>
 
           {/* <span className="h-1 w-full bg-white inline-flex"></span> */}
@@ -47,11 +49,13 @@ function Skills() {
                 viewport={{ once: true, amount: 0.1 }} // Trigger once when at least 10% is in view
                 key={i}
               >
-                <h2 className="font-semibold text-[28px]">{item.title}</h2>
+                <h2 className="font-semibold md:text-[28px] text-[18px]">
+                  {item.title}
+                </h2>
                 <span className="h-1 w-full bg-white inline-flex"></span>
                 {/* <SvgCurve /> */}
 
-                <div className="flex gap-8 pt-8">
+                <div className="md:flex gap-8 pt-8 hidden">
                   {item.skill.map((item, i) => {
                     return (
                       <>
@@ -63,6 +67,28 @@ function Skills() {
                             >
                               {item.icon ? (
                                 <item.icon size={32} />
+                              ) : (
+                                <p className="text-[20px]">{item.lang}</p>
+                              )}
+                            </span>
+                          </Tooltip>
+                        </TooltipGroup>{" "}
+                      </>
+                    );
+                  })}
+                </div>
+                <div className="md:hidden gap-x-8 gap-y-1 pt-8 flex flex-wrap gap-y">
+                  {item.skill.map((item, i) => {
+                    return (
+                      <>
+                        <TooltipGroup>
+                          <Tooltip content={item.value}>
+                            <span
+                              className="cursor-pointer pb-8 flex items-center"
+                              key={i}
+                            >
+                              {item.icon ? (
+                                <item.icon size={20} />
                               ) : (
                                 <p className="text-[20px]">{item.lang}</p>
                               )}

@@ -28,3 +28,9 @@
   border-radius: 50%;
   top: 100%;
 }
+
+@media (max-width: 767px) {
+  .roundedButton {
+    padding: 5px 60px 5px 60px;
+  }
+}
