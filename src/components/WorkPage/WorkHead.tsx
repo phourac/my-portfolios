@@ -63,13 +63,13 @@ function WorkHead() {
 
   return (
     <>
-      <div>
+      <div className="overflow-x-hidden">
         {" "}
         {/* Ensure the content overflows the viewport */}
         <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title={
-              <div className=" h-screen mx-auto flex flex-col justify-center items-center">
+              <div className="h-screen mx-auto flex flex-col justify-center items-center">
                 <motion.div
                   className="font-bold text-[calc(15vw)] md:text-[calc(13vw)] lg:text-[calc(11vw)] text-white flex overflow-visible"
                   variants={container}
@@ -136,7 +136,9 @@ function WorkHead() {
         </ScrollTriggerProvider>
         {/* <WorkResult /> */}
         <WorkList />
-        <SlidingImages slide="work" />
+        <div className="sm:flex hidden">
+          <SlidingImages slide="work" />
+        </div>{" "}
         {/* <Rounded> <p className="text-white">All Work</p></Rounded> */}
         {/* <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen

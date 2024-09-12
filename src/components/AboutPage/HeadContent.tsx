@@ -58,27 +58,7 @@ function HeadContent() {
 
   return (
     <>
-      {/* <div className=" h-screen mx-auto flex flex-col justify-center items-center">
-        <motion.div
-          className="font-bold text-[calc(15vw)] md:text-[calc(13vw)] lg:text-[calc(11vw)] text-white flex overflow-visible"
-          variants={container}
-          initial="hidden"
-          animate="visible"
-        >
-          {letters.map((letter, index) => (
-            <motion.span
-              custom={index}
-              variants={child(calculateXValue(index))}
-              key={index}
-            >
-              {letter === " " ? "\u00A0" : letter}
-            </motion.span>
-          ))}
-        </motion.div>
-      </div> */}
-      <div>
-        {" "}
-        {/* Ensure the content overflows the viewport */}
+      <div className="overflow-x-hidden">
         <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title={
@@ -161,7 +141,9 @@ function HeadContent() {
           />
         </ScrollTriggerProvider>
         <Skills />
-        <SlidingImages slide="about" />
+        <div className="sm:flex hidden">
+          <SlidingImages slide="about" />
+        </div>
         {/* <ScrollTriggerProvider debug={SHOW_MARKERS}>
           <Screen
             title="Scroll based animations 🤯"

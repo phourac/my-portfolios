@@ -18,7 +18,7 @@ const WorkDetails = () => {
 
   return (
     <>
-      <div className="flex flex-col py-32">
+      <div className="flex flex-col py-32 overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-24  h-auto">
           <p className="text-6xl">{details?.title}</p>
           <div className="flex justify-between items-center pt-32">
@@ -83,7 +83,7 @@ const WorkDetails = () => {
         )}
 
         <div className="pt-32 flex justify-center ">
-          <div className="flex justify-center gap-8">
+          <div className="flex md:flex-row flex-col justify-center gap-8">
             {details?.detatil?.mobile
               ? details?.detatil?.mobile.map((item, i) => {
                   return (

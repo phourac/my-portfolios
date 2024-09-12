@@ -40,7 +40,7 @@ function Introduction() {
           return controls.stop;
         }}
       >
-        <motion.span className="text-[58px] font-bold">
+        <motion.span className="md:text-[58px] sm:text-[32px] text-[32px] font-bold">
           {displayText}
         </motion.span>
         {/* <CursorBlinker /> */}
@@ -54,7 +54,7 @@ function Introduction() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3 }}
-        className="absolute right-72 top-44"
+        className="absolute right-72 top-44 md:flex hidden"
       >
         <ArrowHand />
       </motion.div>
@@ -66,11 +66,11 @@ function Introduction() {
           duration: 2, // Duration of the transition
           ease: "easeInOut", // Easing function for smooth animation
         }}
-        className="absolute bottom-28 left-28"
+        className="absolute bottom-28 md:left-28"
       >
         <FaArrowRight size={28} />
       </motion.div>
-      <div className="pl-[50%]">
+      <div className="md:pl-[50%]">
         <RedoAnimText delay={1 + 1} texts={texts} />
       </div>
     </div>

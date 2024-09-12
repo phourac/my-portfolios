@@ -35,3 +35,11 @@
   transition: all 0.4s;
   font-weight: 300;
 }
+
+@media (max-width: 767px) {
+  .project {
+    flex-direction: column;
+    padding: 20px; /* Adjust padding if needed */
+    align-items: start;
+  }
+}

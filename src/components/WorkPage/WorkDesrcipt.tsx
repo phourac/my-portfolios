@@ -18,7 +18,10 @@ function WorkDesrcipt() {
           <RedoAnimText delay={0} texts={texts} />
         </div>
 
-        <Link href={"/about"} className="absolute right-56 bottom-56">
+        <Link
+          href={"/about"}
+          className="absolute right-56 bottom-56 whitespace-nowrap"
+        >
           <Rounded>
             <p>About me</p>
           </Rounded>{" "}

@@ -32,8 +32,8 @@ export default function Project({ index, job, place, year }: IProject) {
 
   return (
     <div className={styles.project} style={{ position: "relative" }}>
-      <p className="text-4xl">{job}</p>
-      <div className="text-xl">
+      <p className="md:text-4xl text-lg">{job}</p>
+      <div className="md:text-xl text-md">
         <p>{year}</p>
         <p>{place}</p>
       </div>

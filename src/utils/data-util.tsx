@@ -245,9 +245,11 @@ export const SkillsData = [
 export const contact = {
   phone: {
     number: "+855 85704481",
+    link: "https://t.me/phourac",
   },
   email: {
     e: "tphourac@gmail.com",
+    link: "mailto:tphourac@gmail.com",
   },
 };
 

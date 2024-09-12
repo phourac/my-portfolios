@@ -55,7 +55,7 @@ const WorkList = () => {
             initial={{ opacity: 0, x: 50 }} // Animation for entering
             animate={{ opacity: 1, x: 0 }} // Animation for visible state
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid md:grid-cols-2 grid-cols-1 gap-4"
           >
             {projectData.map((item, i) => (
               <Link
@@ -115,12 +115,12 @@ const WorkList = () => {
         </div>
       </div>
 
-      {/* <div ref={container} className={styles.slidingImages}>
+      <div ref={container} className={styles.slidingImages}>
         <div className="bg-primary-dark h-[400px] inline-block w-full"></div>
         <motion.div style={{ height }} className={styles.circleContainer}>
           <div className={styles.circle}></div>
         </motion.div>
-      </div> */}
+      </div>
     </>
   );
 };

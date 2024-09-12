@@ -57,23 +57,18 @@ export default function Footer() {
         </div>
         <div className={styles.nav}>
           <Rounded>
-            <p>{contact.email.e}</p>
+            <Link href={contact.email.link} target="_blank">
+              <p className="text-black">{contact.email.e}</p>
+            </Link>
           </Rounded>
+
           <Rounded>
-            <p>{contact.phone.number}</p>
+            <Link href={contact.phone.link} target="_blank">
+              <p className="text-black">{contact.phone.number}</p>
+            </Link>
           </Rounded>
         </div>
         <div className={styles.info}>
-          {/* <div>
-            <span>
-              <h3>Version</h3>
-              <p>2024 © Edition</p>
-            </span>
-            <span>
-              <h3>Version</h3>
-              <p>11:49 PM GMT+2</p>
-            </span>
-          </div> */}
           <div className="flex flex-col justify-start items-start">
             <h3 className="text-start w-full">socials</h3>
             <div className="flex justify-start items-start">

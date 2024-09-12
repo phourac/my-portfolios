@@ -42,7 +42,7 @@ export default function WorkResult() {
 
   return (
     <>
-      <p className="flex justify-start pb-8 text-5xl text-purple-400">
+      <p className="flex justify-start pb-8 md:text-5xl text-xl text-purple-400">
         Education and Job
       </p>
       <main className={styles.main}>

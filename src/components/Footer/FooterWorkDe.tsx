@@ -44,11 +44,11 @@ export default function FooterWorkDe() {
           {/* <div className={styles.imageContainer}>
               <Image fill={true} alt={"image"} src={`/images/background.jpg`} />
             </div> */}
-          <div className="flex justify-between gap-32 ">
+          <div className="flex md:flex-row flex-col justify-between md:gap-32 gap-8">
             <div className="flex justify-center flex-col items-center gap-8">
               <h2 className="text-black">Next case</h2>
               <h2
-                className={`text-8xl ${
+                className={`md:text-8xl text-6xl ${
                   hover ? "text-black/65" : "text-black"
                 } transition-colors duration-300 ease-in-out`}
               >
@@ -57,10 +57,22 @@ export default function FooterWorkDe() {
 
               {/* <hr className="w-[75%] h-1" /> */}
             </div>
+
             <motion.div
               animate={hover ? { y: 0 } : { y: 100 }}
               transition={{ duration: 0.2 }}
-              className={`p-4 `}
+              className={`p-4 md:flex hidden`}
+              style={{ backgroundColor: `${nextCaseProject?.detatil?.color}` }}
+            >
+              <Image
+                src={nextCaseProject?.img || ""}
+                alt=""
+                width={500}
+                height={500}
+              />
+            </motion.div>
+            <motion.div
+              className={`p-4 flex md:hidden`}
               style={{ backgroundColor: `${nextCaseProject?.detatil?.color}` }}
             >
               <Image
@@ -99,12 +111,17 @@ export default function FooterWorkDe() {
             />
           </motion.svg>
         </Link>
-        <div className="flex gap-[20px]  ml-[200px] mr-[200px] relative z-50">
+        <div className="flex gap-[20px] md:ml-[200px] ml-[10px] mr-[200px] relative z-50 md:w-[100%] w-[80%]">
           <Rounded>
-            <p>{contact.email.e}</p>
+            <Link href={contact.email.link} target="_blank">
+              <p className="text-black">{contact.email.e}</p>
+            </Link>
           </Rounded>
+
           <Rounded>
-            <p>{contact.phone.number}</p>
+            <Link href={contact.phone.link} target="_blank">
+              <p className="text-black">{contact.phone.number}</p>
+            </Link>
           </Rounded>
         </div>
         <div className={styles.info}>
