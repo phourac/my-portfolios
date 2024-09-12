@@ -6,16 +6,11 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import styles from "./style.module.scss";
 import { socials, socialsMedia } from "@/utils/data-util";
 import Link from "next/link";
-
-interface IFormInputs {
-  name: string;
-  phone_number: string;
-  email: string;
-  message: string;
-}
+import emailjs from "@emailjs/browser";
 
 const FormContact = () => {
-  const { handleSubmit } = useForm<IFormInputs>();
+  const form = useRef<HTMLFormElement | null>(null);
+
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true });
   const container = useRef(null);
@@ -24,17 +19,43 @@ const FormContact = () => {
     offset: ["start end", "end start"],
   });
   const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
-  const onSubmit: SubmitHandler<IFormInputs> = (data) => {};
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_zqocrra",
+          "template_eh91zd8",
+          form.current,
+          "t81HpezQjVmrq1uE0"
+        )
+        .then(
+          (data) => {
+            // console.log("SUCCESS!");
+            // // console.log("data", data);
+            if (data.text === "OK" || data.status === 200)
+              alert("Your form has been sent!!!");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            if (error) alert("Somthing went wrong!!!");
+          }
+        );
+    }
+  };
   return (
     <>
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        ref={form}
+        // onSubmit={handleSubmit(onSubmit)}
+        onSubmit={sendEmail}
         className="w-full flex flex-col items-start justify-center px-4 md:px-16 lg:px-80 pt-10"
       >
         <div className="relative z-0 w-full mb-7 group">
           <input
             type="text"
-            name="floating_email"
+            name="to_name"
             className="block py-5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=""
           />
@@ -48,7 +69,7 @@ const FormContact = () => {
         <div className="relative z-0 w-full mb-7 group">
           <input
             type="email"
-            name="floating_email"
+            name="user_email"
             className="block py-5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
           />
@@ -62,7 +83,7 @@ const FormContact = () => {
         <div className="relative z-0 w-full mb-7 group">
           <input
             type="text"
-            name="floating_email"
+            name="phone"
             className="block py-5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
           />
@@ -76,9 +97,9 @@ const FormContact = () => {
         <div className="relative z-0 w-full mb-20 group">
           <input
             type="text"
-            name="floating_email"
+            name="message"
             className="block py-5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
+            placeholder=""
           />
           <label
             //   for="floating_email"
@@ -87,7 +108,7 @@ const FormContact = () => {
             Message
           </label>
         </div>
-        <button type="submit">
+        <button type="submit" value="Send">
           <Rounded>
             <p className="text-xl">Submit</p>
           </Rounded>
