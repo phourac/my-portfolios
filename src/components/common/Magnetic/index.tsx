@@ -10,7 +10,6 @@ export default function Magnetic({ children }: IMagneticProps) {
 
   useEffect(() => {
     if (magnetic.current) {
-      console.log(children);
       const xTo = gsap.quickTo(magnetic.current, "x", {
         duration: 1,
         ease: "elastic.out(1, 0.3)",

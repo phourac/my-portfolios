@@ -32,8 +32,6 @@ const FormContact = () => {
         )
         .then(
           (data) => {
-            // console.log("SUCCESS!");
-            // // console.log("data", data);
             if (data.text === "OK" || data.status === 200)
               alert("Your form has been sent!!!");
           },

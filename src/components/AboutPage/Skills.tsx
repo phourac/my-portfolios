@@ -58,7 +58,7 @@ function Skills() {
                 <div className="md:flex gap-8 pt-8 hidden">
                   {item.skill.map((item, i) => {
                     return (
-                      <>
+                      <React.Fragment key={i}>
                         <TooltipGroup>
                           <Tooltip content={item.value}>
                             <span
@@ -73,14 +73,14 @@ function Skills() {
                             </span>
                           </Tooltip>
                         </TooltipGroup>{" "}
-                      </>
+                      </React.Fragment>
                     );
                   })}
                 </div>
                 <div className="md:hidden gap-x-8 gap-y-1 pt-8 flex flex-wrap gap-y">
                   {item.skill.map((item, i) => {
                     return (
-                      <>
+                      <React.Fragment key={i}>
                         <TooltipGroup>
                           <Tooltip content={item.value}>
                             <span
@@ -95,7 +95,7 @@ function Skills() {
                             </span>
                           </Tooltip>
                         </TooltipGroup>{" "}
-                      </>
+                      </React.Fragment>
                     );
                   })}
                 </div>

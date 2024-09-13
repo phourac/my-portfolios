@@ -24,12 +24,9 @@ export default function FooterWorkDe() {
   const params = useParams();
   const id = params.id;
   const lastId = projects.length;
-  console.log("lastId", lastId);
   const nextCaseID = +id === lastId ? 1 : +id + 1;
-  console.log("nextCaseID", nextCaseID);
 
   const nextCaseProject = projects.find((item) => item.id === nextCaseID);
-  console.log("color", nextCaseProject?.detatil?.color);
 
   return (
     <motion.div style={{ y }} ref={container} className={styles.contact}>
