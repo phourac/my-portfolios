@@ -20,7 +20,7 @@ function WorkDesrcipt() {
 
         <Link
           href={"/about"}
-          className="absolute right-56 bottom-56 whitespace-nowrap"
+          className="absolute md:right-56  bottom-56 whitespace-nowrap"
         >
           <Rounded>
             <p>About me</p>

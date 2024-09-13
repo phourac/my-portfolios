@@ -22,7 +22,6 @@ const Stars = (props: any) => {
     });
 
     const sphereFloat32 = new Float32Array(generatedSphere);
-    console.log("Generated sphere:", sphereFloat32);
     if (!validateSphere(sphereFloat32)) {
       throw new Error("Sphere contains NaN values");
     }
