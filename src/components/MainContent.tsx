@@ -29,8 +29,6 @@ function ChildComponent({ children }: { children: ReactNode }) {
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
 
-  const [cursorVariant, setCursorVariant] = useState("default");
-
   const ref = React.useRef(null);
   const mouse = useMouse(ref, {
     enterDelay: 100,
@@ -75,7 +73,7 @@ function ChildComponent({ children }: { children: ReactNode }) {
         <motion.div
           variants={variants}
           className="circle"
-          animate={cursorVariant}
+          animate={"default"}
           transition={spring}
         ></motion.div>
         <AnimatePresence>
