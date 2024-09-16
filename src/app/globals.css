@@ -91,6 +91,33 @@ h1 {
   max-width: 400px;
 }
 
+.circle {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent; /* Transparent background */
+  border: 1px solid white; /* Define the border */
+  border-radius: 50%; /* Circular shape */
+  pointer-events: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.circle::before {
+  content: ""; /* Empty content for the dot */
+  display: block;
+  width: 4px; /* Size of the dot */
+  height: 4px;
+  background-color: white; /* Color of the dot */
+  border-radius: 50%; /* Make it a dot */
+}
+
 /* .row {
   display: flex;
   gap: 12px;

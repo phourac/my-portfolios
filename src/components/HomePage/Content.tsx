@@ -1,14 +1,52 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Developer from "../AnimationIcon/Developer";
-
 import { motion } from "framer-motion";
 import LearnMoreIcon from "../AnimationIcon/LearnMoreIcon";
 import Magnetic from "../common/Magnetic";
+import love from "../../../public/img/social-media-like-emoji.png";
+import Image from "next/image";
+import { gsap } from "gsap";
 
 function Content() {
   const [hover, setHover] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const initialPosition = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      if (imageRef.current) {
+        const rect = imageRef.current.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        gsap.to(imageRef.current, {
+          x: (clientX - centerX) * 0.03, // Adjust multiplier for subtle movement
+          y: (clientY - centerY) * 0.03, // Adjust multiplier for subtle movement
+          duration: 0.3,
+          ease: "power3.out",
+        });
+      }
+    };
+
+    // Set initial position
+    if (imageRef.current) {
+      const rect = imageRef.current.getBoundingClientRect();
+      initialPosition.current = {
+        x: rect.left,
+        y: rect.top,
+      };
+    }
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="container mx-auto px-4 md:px-24">
@@ -32,8 +70,6 @@ function Content() {
               <motion.div
                 style={{
                   display: "inline-block",
-                  //   backgroundImage:
-                  //     "linear-gradient(90deg, #ffffff, #4a3dd0, #BF40BF)",
                   backgroundSize: "200% 200%",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -49,7 +85,7 @@ function Content() {
                   ],
                 }}
                 transition={{
-                  duration: 8, // Duration of the entire animation cycle
+                  duration: 8,
                   repeat: Infinity,
                   ease: "linear",
                 }}
@@ -69,14 +105,14 @@ function Content() {
               <motion.div
                 onHoverStart={() => setHover(true)}
                 onHoverEnd={() => setHover(false)}
-                whileHover={{ scale: 1.1 }} // Add scaling effect on hover
+                whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Link
                   href={"/about"}
                   className={`rounded-xl pl-8 ${
                     hover ? "pr-0" : "pr-8"
-                  }  py-2 mt-12 text-[18px] flex items-center justify-center bg-secondary text-white`}
+                  } py-2 mt-12 text-[18px] flex items-center justify-center bg-secondary text-white`}
                 >
                   Learn more
                   {hover && <LearnMoreIcon />}
@@ -84,6 +120,7 @@ function Content() {
               </motion.div>
             </Magnetic>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{
@@ -96,9 +133,20 @@ function Content() {
               },
               x: 0,
             }}
-            className="md:block hidden"
+            className="md:block hidden relative"
           >
             <Developer />
+            {/* Floating image effect */}
+            <div className="absolute right-0 bottom-28">
+              <Image
+                src={love}
+                alt="Floating Love"
+                width={150}
+                height={150}
+                ref={imageRef}
+                className="floating-image"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
