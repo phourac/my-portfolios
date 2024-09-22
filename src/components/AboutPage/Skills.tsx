@@ -3,15 +3,12 @@ import { SkillsData } from "@/utils/data-util";
 import React, { useRef, useState } from "react";
 import { Tooltip, TooltipGroup } from "./ToolTip";
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./style.module.scss";
-import SvgCurve from "../../components/SvgCurve/index";
+import styles from "../../assets/style/sliderImg.module.scss";
 
 import "../../app/globals.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Magnetic from "../common/Magnetic";
 
 function Skills() {
-  const constraintsRef = useRef(null);
   const [showMore, setShowMore] = useState(false);
 
   const dataToDisplay = !showMore ? SkillsData.slice(0, 3) : SkillsData;

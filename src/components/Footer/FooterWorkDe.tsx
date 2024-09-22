@@ -66,6 +66,7 @@ export default function FooterWorkDe() {
                 alt=""
                 width={500}
                 height={500}
+                priority
               />
             </motion.div>
             <motion.div
@@ -77,6 +78,7 @@ export default function FooterWorkDe() {
                 alt=""
                 width={500}
                 height={500}
+                priority
               />
             </motion.div>
           </div>

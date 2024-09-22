@@ -1,10 +1,9 @@
 "use client";
 import React, { useRef } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
 import Rounded from "../common/RoundedButton";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import styles from "./style.module.scss";
-import { socials, socialsMedia } from "@/utils/data-util";
+import styles from "../../assets/style/sliderImg.module.scss";
+import { socialsMedia } from "@/utils/data-util";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
 

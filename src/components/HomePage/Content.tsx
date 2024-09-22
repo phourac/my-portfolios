@@ -145,6 +145,7 @@ function Content() {
                 height={150}
                 ref={imageRef}
                 className="floating-image"
+                priority
               />
             </div>
           </motion.div>

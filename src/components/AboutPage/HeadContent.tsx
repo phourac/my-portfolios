@@ -8,7 +8,6 @@ import ScrollIcon from "../AnimationIcon/ScrollIcon";
 import LineAnimate from "../AnimationIcon/LineAnimate";
 import BubbleAnimate from "../AnimationIcon/BubbleAnimate";
 import Skills from "./Skills";
-import Project from "../WorkPage/project";
 import WorkResult from "../WorkPage/WorkResult";
 import SlidingImages from "../SlidingImages";
 

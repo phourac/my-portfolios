@@ -51,6 +51,7 @@ const WorkDetails = () => {
               height={0}
               className="w-full h-auto"
               sizes="(min-width: 1200px) 75vw, (min-width: 768px) 50vw, 100vw"
+              priority
             />
           </div>
         </div>
@@ -62,6 +63,7 @@ const WorkDetails = () => {
               width={900}
               height={900}
               sizes="(min-width: 1200px) 75vw, (min-width: 768px) 50vw, 100vw"
+              priority
             />
           </div>
         )}
@@ -94,6 +96,7 @@ const WorkDetails = () => {
                       width={300}
                       height={300}
                       sizes="(min-width: 808px) 50vw, 100vw"
+                      priority
                     />
                   );
                 })
@@ -106,6 +109,7 @@ const WorkDetails = () => {
                       width={600}
                       height={600}
                       sizes="(min-width: 808px) 50vw, 100vw"
+                      priority
                     />
                   );
                 })}

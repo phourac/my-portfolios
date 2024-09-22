@@ -1,11 +1,10 @@
 "use client";
 import styles from "./style.module.scss";
-import Image from "next/image";
 import Rounded from "../common/RoundedButton";
 import Magnetic from "../common/Magnetic";
 
 import { useRef } from "react";
-import { useScroll, motion, useTransform, useSpring } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 import { contact, socials } from "@/utils/data-util";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

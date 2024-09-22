@@ -1,7 +1,6 @@
 "use client";
 import React, { ReactNode, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Header from "./Header/nav/Header";
 import MainHeader from "./Header";
 import { usePathname } from "next/navigation";
 import useMouse from "@react-hook/mouse-position";

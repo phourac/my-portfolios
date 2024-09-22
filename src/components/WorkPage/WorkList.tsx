@@ -5,15 +5,8 @@ import Link from "next/link";
 import styles from "./circle.module.scss";
 
 import React, { useRef, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { useParams } from "next/navigation";
-import SlidingImages from "../SlidingImages";
 
 const WorkList = () => {
   const container = useRef(null);
@@ -73,6 +66,7 @@ const WorkList = () => {
                   <Image
                     src={item.img}
                     alt=""
+                    priority
                     height={600}
                     width={600}
                     className={`${

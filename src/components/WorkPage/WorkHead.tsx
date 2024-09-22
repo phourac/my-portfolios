@@ -6,16 +6,9 @@ import Screen from "../Screen";
 import ScrollIcon from "../AnimationIcon/ScrollIcon";
 import LineAnimate from "../AnimationIcon/LineAnimate";
 import BubbleAnimate from "../AnimationIcon/BubbleAnimate";
-import Skills from "../AboutPage/Skills";
-import Introduction from "../AboutPage/Introduction";
-import WorkResult from "./WorkResult";
-import RedoAnimText from "../AboutPage/RedoAnimText";
 import WorkDesrcipt from "./WorkDesrcipt";
-import Magnetic from "../common/Magnetic";
-import Rounded from "../common/RoundedButton";
 import WorkList from "./WorkList";
 import SlidingImages from "../SlidingImages";
-import { projects } from "@/utils/data-util";
 
 function WorkHead() {
   const text = "Experiences";

@@ -32,14 +32,14 @@ const Stars = (props: any) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const animationDuration = 2000; // Duration in milliseconds
+    const animationDuration = 2000;
     const startTime = Date.now();
 
     const animate = () => {
       const elapsedTime = Date.now() - startTime;
       const progress = Math.min(elapsedTime / animationDuration, 1);
       const newPosition: [number, number, number] = [
-        2 - 2 * progress, // x-axis remains 0 for bottom center
+        2 - 2 * progress,
         // -2 + 2 * progress, // y-axis transition from -2 to 0
         2 - 2 * progress, // y-axis transition from -2 to 0
 
@@ -55,7 +55,7 @@ const Stars = (props: any) => {
     requestAnimationFrame(animate);
   }, []);
 
-  // Handle mouse movement and update rotation accordingly
+  // Handle mouse  and update rotation accordingly
   const handleMouseMove = (event: MouseEvent) => {
     const { clientX, clientY } = event;
     const x = (clientX / window.innerWidth) * 2 - 1; // Normalize to [-1, 1]
@@ -70,7 +70,7 @@ const Stars = (props: any) => {
     };
   }, []);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (ref.current) {
       // Continue normal rotation
       ref.current.rotation.x -= delta / 10;
