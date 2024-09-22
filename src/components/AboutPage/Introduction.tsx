@@ -1,8 +1,6 @@
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import React, { useState } from "react";
 import RedoAnimText from "./RedoAnimText";
-import CursorBlinker from "./CursorBlinker";
-import AboutMe from "../AnimationIcon/AboutMe";
 import ArrowHand from "../AnimationIcon/ArrowHand";
 import { FaArrowRight } from "react-icons/fa";
 

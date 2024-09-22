@@ -1,5 +1,4 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Content from "./Content";
 import { Canvas } from "@react-three/fiber";
 import Stars from "./Stars";

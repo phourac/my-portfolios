@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import gsap from "gsap";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 interface IModal {
@@ -109,6 +108,7 @@ export default function Modal({ modal, projects }: IModal) {
                   width={300}
                   height={0}
                   alt="image"
+                  priority
                 />
                 {/* <button className="px-4 py-2 bg-white text-black font-bold rounded mt-4 absolute z-50">
                   Button

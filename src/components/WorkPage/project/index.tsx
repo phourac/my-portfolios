@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import styles from "./styles.module.css";
-import Image from "next/image";
 
 interface IProject {
   index: number;
@@ -12,9 +11,6 @@ interface IProject {
 }
 
 export default function Project({ index, job, place, year }: IProject) {
-  const [hover, setHover] = useState(false);
-  const [position, setPosition] = useState({ x: 10, y: 20 });
-
   useEffect(() => {
     gsap.set(".ball", { xPercent: -50, yPercent: -50 });
     let targets = gsap.utils.toArray(".ball");
