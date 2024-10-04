@@ -2,17 +2,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ScrollTriggerProvider } from "../ScrollTriggerProvider";
-import dynamic from "next/dynamic";
+import Screen from "../Screen";
+import Introduction from "./Introduction";
+import ScrollIcon from "../AnimationIcon/ScrollIcon";
+import LineAnimate from "../AnimationIcon/LineAnimate";
+import BubbleAnimate from "../AnimationIcon/BubbleAnimate";
 import Skills from "./Skills";
-
-const Screen = dynamic(() => import("../Screen"));
-const Introduction = dynamic(() => import("./Introduction"));
-const ScrollIcon = dynamic(() => import("../AnimationIcon/ScrollIcon"));
-const LineAnimate = dynamic(() => import("../AnimationIcon/LineAnimate"));
-const BubbleAnimate = dynamic(() => import("../AnimationIcon/BubbleAnimate"));
-// const Skills = dynamic(() => import("./Skills"));
-const WorkResult = dynamic(() => import("../WorkPage/WorkResult"));
-const SlidingImages = dynamic(() => import("../SlidingImages"));
+import WorkResult from "../WorkPage/WorkResult";
+import SlidingImages from "../SlidingImages";
 
 function HeadContent() {
   const text = "About me";
