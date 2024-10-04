@@ -1,13 +1,16 @@
 "use client";
 import styles from "./style.module.scss";
-import Rounded from "../common/RoundedButton";
-import Magnetic from "../common/Magnetic";
+// import Rounded from "../common/RoundedButton";
+// import Magnetic from "../common/Magnetic";
+const Rounded = dynamic(() => import("../common/RoundedButton"));
+const Magnetic = dynamic(() => import("../common/Magnetic"));
 
 import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { contact, socials } from "@/utils/data-util";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 
 export default function Footer() {
   const container = useRef(null);

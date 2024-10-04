@@ -1,10 +1,16 @@
 import Skills from "@/components/AboutPage/Skills";
-import FormContact from "@/components/ContactPage/FormContact";
-import FormHeader from "@/components/ContactPage/FormHeader";
-import Footer from "@/components/Footer";
+// import FormContact from "@/components/ContactPage/FormContact";
+// import FormHeader from "@/components/ContactPage/FormHeader";
+// import Footer from "@/components/Footer";
 import { cookies } from "next/headers";
 import React from "react";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
+const Footer = dynamic(() => import("@/components/Footer"));
+const FormContact = dynamic(
+  () => import("@/components/ContactPage/FormContact")
+);
+const FormHeader = dynamic(() => import("@/components/ContactPage/FormHeader"));
 
 export const metadata: Metadata = {
   openGraph: {

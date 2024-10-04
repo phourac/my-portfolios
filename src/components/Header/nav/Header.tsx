@@ -3,10 +3,15 @@ import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { menuSlide } from "../anim";
-import Link from "./Link";
-import Curve from "./Curve";
-import Footer from "./Footer";
+// import Link from "./Link";
+// import Curve from "./Curve";
+// import Footer from "./Footer";
+const Link = dynamic(() => import("./Link"));
+const Curve = dynamic(() => import("./Curve"));
+const Footer = dynamic(() => import("./Footer"));
+
 import { navItems } from "@/utils/data-util";
+import dynamic from "next/dynamic";
 
 export default function Header() {
   const pathname = usePathname();
