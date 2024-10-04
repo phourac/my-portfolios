@@ -1,7 +1,12 @@
 "use client";
-import Content from "./Content";
+// import Content from "./Content";
+const Content = dynamic(() => import("./Content"));
+
 import { Canvas } from "@react-three/fiber";
-import Stars from "./Stars";
+// import Stars from "./Stars";
+const Stars = dynamic(() => import("./Stars"));
+
+import dynamic from "next/dynamic";
 
 const ThreeJs = () => {
   return (

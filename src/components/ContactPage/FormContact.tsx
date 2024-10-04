@@ -55,6 +55,7 @@ const FormContact = () => {
             name="to_name"
             className="block py-5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=""
+            required
           />
           <label
             //   for="floating_email"
@@ -69,6 +70,7 @@ const FormContact = () => {
             name="user_email"
             className="block py-5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
+            required
           />
           <label
             //   for="floating_email"
@@ -82,7 +84,8 @@ const FormContact = () => {
             type="text"
             name="phone"
             className="block py-5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
+            placeholder=""
+            required
           />
           <label
             //   for="floating_email"

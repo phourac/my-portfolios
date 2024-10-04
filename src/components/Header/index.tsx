@@ -1,9 +1,12 @@
 "use client";
 import styles from "./style.module.scss";
 import { useEffect, useState } from "react";
-import Nav from "./nav/Header";
+// import Nav from "./nav/Header";
+const Nav = dynamic(() => import("./nav/Header"));
+
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
 
 export default function MainHeader() {
   const [isActive, setIsActive] = useState(false);

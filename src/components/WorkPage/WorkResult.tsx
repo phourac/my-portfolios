@@ -1,5 +1,8 @@
 "use client";
-import Project from "./project";
+import dynamic from "next/dynamic";
+// import Project from "./project";
+const Project = dynamic(() => import("./project"));
+
 import { experiences } from "@/utils/data-util";
 
 export default function WorkResult() {

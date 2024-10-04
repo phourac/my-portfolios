@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import MainContent from "@/components/MainContent";
-import ChildComponent from "@/components/MainContent";
-import Footer from "@/components/Footer";
+// import ChildComponent from "@/components/MainContent";
 import { ModalProvider } from "@/context/ModalContext";
+import dynamic from "next/dynamic";
+const ChildComponent = dynamic(() => import("@/components/MainContent"));
 
 const font = localFont({
   src: [

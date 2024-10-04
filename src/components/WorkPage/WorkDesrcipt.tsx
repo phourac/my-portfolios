@@ -1,10 +1,14 @@
 "use client";
 import React from "react";
-import RedoAnimText from "../AboutPage/RedoAnimText";
-import Rounded from "../common/RoundedButton";
+// import RedoAnimText from "../AboutPage/RedoAnimText";
+// import Rounded from "../common/RoundedButton";
+
+const RedoAnimText = dynamic(() => import("../AboutPage/RedoAnimText"));
+const Rounded = dynamic(() => import("../common/RoundedButton"));
 
 import SvgCurve from "../../components/SvgCurve/index";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 function WorkDesrcipt() {
   const texts = [

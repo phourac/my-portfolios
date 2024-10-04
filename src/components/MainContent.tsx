@@ -1,10 +1,12 @@
 "use client";
 import React, { ReactNode, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import MainHeader from "./Header";
+// import MainHeader from "./Header";
 import { usePathname } from "next/navigation";
 import useMouse from "@react-hook/mouse-position";
 import "../app/globals.css";
+import dynamic from "next/dynamic";
+const MainHeader = dynamic(() => import("./Header"));
 
 function ChildComponent({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);

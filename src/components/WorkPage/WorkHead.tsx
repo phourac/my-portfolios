@@ -2,13 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ScrollTriggerProvider } from "../ScrollTriggerProvider";
-import Screen from "../Screen";
-import ScrollIcon from "../AnimationIcon/ScrollIcon";
-import LineAnimate from "../AnimationIcon/LineAnimate";
-import BubbleAnimate from "../AnimationIcon/BubbleAnimate";
-import WorkDesrcipt from "./WorkDesrcipt";
-import WorkList from "./WorkList";
-import SlidingImages from "../SlidingImages";
+import dynamic from "next/dynamic";
+
+const Screen = dynamic(() => import("../Screen"));
+const ScrollIcon = dynamic(() => import("../AnimationIcon/ScrollIcon"));
+const LineAnimate = dynamic(() => import("../AnimationIcon/LineAnimate"));
+const BubbleAnimate = dynamic(() => import("../AnimationIcon/BubbleAnimate"));
+const WorkDesrcipt = dynamic(() => import("./WorkDesrcipt")); // Assuming it's a typo and should be "WorkDescription"
+const WorkList = dynamic(() => import("./WorkList"));
+const SlidingImages = dynamic(() => import("../SlidingImages"));
 
 function WorkHead() {
   const text = "Experiences";
