@@ -3,13 +3,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ScrollTriggerProvider } from "../ScrollTriggerProvider";
 import dynamic from "next/dynamic";
+import Skills from "./Skills";
 
 const Screen = dynamic(() => import("../Screen"));
 const Introduction = dynamic(() => import("./Introduction"));
 const ScrollIcon = dynamic(() => import("../AnimationIcon/ScrollIcon"));
 const LineAnimate = dynamic(() => import("../AnimationIcon/LineAnimate"));
 const BubbleAnimate = dynamic(() => import("../AnimationIcon/BubbleAnimate"));
-const Skills = dynamic(() => import("./Skills"));
+// const Skills = dynamic(() => import("./Skills"));
 const WorkResult = dynamic(() => import("../WorkPage/WorkResult"));
 const SlidingImages = dynamic(() => import("../SlidingImages"));
 
